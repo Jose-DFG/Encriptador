@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dist/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap"
+      rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/0049eb999b.js"
+      crossorigin="anonymous"></script>
+    <script defer type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/modules/encriptar.js"></script>
+    <script type="module" src="/src/js/modules/desencriptar.js"></script>
+  </head>
+  <body class="flex justify-center font-inter">
+    <div class="mb-3 w-full">
+      <header>
+        <div
+          class="flex w-auto items-center justify-center border bg-white py-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.0"
+            width="40"
+            height="50"
+            viewBox="0 0 490.000000 529.000000"
+            preserveAspectRatio="xMidYMid meet"
+            class="cursor-pointer">
+            <g
+              transform="translate(0.000000,529.000000) scale(0.100000,-0.100000)"
+              fill="#1A946F"
+              stroke="none"
+              class="logo">
+              <path
+                d="M2164 4909 c-142 -83 -262 -156 -266 -162 -16 -25 -8 -74 15 -94 42 -38 511 -303 537 -303 26 0 496 265 538 303 22 21 30 69 14 94 -15 23 -526 313 -552 313 -16 0 -132 -61 -286 -151z" />
+              <path
+                d="M1580 4587 c-113 -65 -413 -239 -432 -251 -24 -14 -41 -60 -33 -85 8 -28 24 -38 300 -196 132 -76 251 -138 265 -138 27 0 511 274 548 310 26 26 28 60 4 89 -27 34 -519 314 -550 314 -15 0 -61 -20 -102 -43z" />
+              <path
+                d="M3209 4597 c-19 -13 -41 -26 -49 -30 -8 -4 -37 -20 -65 -37 -27 -16 -61 -34 -75 -40 -13 -6 -27 -14 -30 -18 -3 -4 -16 -13 -30 -20 -14 -7 -43 -23 -65 -37 -22 -13 -50 -29 -63 -35 -13 -5 -30 -17 -38 -25 -9 -8 -21 -15 -28 -15 -21 0 -66 -51 -66 -74 0 -30 31 -61 92 -92 28 -14 58 -32 65 -40 8 -8 25 -17 39 -20 13 -3 24 -10 24 -14 0 -5 16 -14 35 -21 19 -7 35 -16 35 -20 0 -4 10 -11 22 -15 13 -4 39 -17 58 -30 43 -28 115 -69 158 -91 35 -18 45 -16 137 41 48 30 84 50 128 73 17 9 34 19 37 23 3 3 20 12 38 19 17 8 32 17 32 21 0 4 11 11 24 14 14 3 31 12 38 19 7 7 35 24 61 37 118 59 127 127 24 175 -18 8 -45 24 -62 35 -32 21 -84 51 -125 72 -14 7 -27 16 -30 20 -3 4 -17 12 -30 18 -14 6 -47 24 -75 40 -27 17 -57 33 -65 37 -8 4 -30 17 -49 30 -19 13 -42 23 -51 23 -9 0 -32 -10 -51 -23z" />
+              <path
+                d="M3724 4039 c-142 -83 -262 -156 -266 -162 -16 -25 -8 -74 15 -94 42 -38 511 -303 537 -303 26 0 496 265 538 303 22 21 30 69 14 94 -15 23 -526 313 -552 313 -16 0 -132 -61 -286 -151z" />
+              <path
+                d="M644 4019 c-142 -83 -262 -156 -266 -162 -16 -25 -8 -74 14 -94 43 -38 512 -303 538 -303 26 0 496 265 538 303 22 21 30 69 14 94 -15 23 -526 313 -552 313 -16 0 -132 -61 -286 -151z" />
+              <path
+                d="M1689 3707 c-19 -13 -41 -26 -49 -30 -8 -4 -37 -20 -65 -37 -27 -16 -61 -34 -75 -40 -13 -6 -27 -14 -30 -18 -3 -4 -16 -13 -30 -20 -14 -7 -43 -23 -65 -37 -22 -13 -50 -29 -63 -35 -13 -5 -30 -17 -38 -25 -9 -8 -21 -15 -28 -15 -21 0 -66 -51 -66 -74 0 -30 31 -61 92 -92 28 -14 58 -32 65 -40 8 -8 25 -17 39 -20 13 -3 24 -10 24 -14 0 -5 16 -14 35 -21 19 -7 35 -16 35 -20 0 -4 10 -11 22 -15 13 -4 39 -17 58 -30 43 -28 115 -69 158 -91 35 -18 45 -16 137 41 48 30 84 50 128 73 17 9 34 19 37 23 3 3 20 12 38 19 17 8 32 17 32 21 0 4 11 11 24 14 14 3 31 12 38 19 7 7 35 24 61 37 118 59 127 127 24 175 -18 8 -45 24 -62 35 -32 21 -84 51 -125 72 -14 7 -27 16 -30 20 -3 4 -17 12 -30 18 -14 6 -47 24 -75 40 -27 17 -57 33 -65 37 -8 4 -30 17 -49 30 -19 13 -42 23 -51 23 -9 0 -32 -10 -51 -23z" />
+              <path
+                d="M4545 3611 c-6 -5 -113 -68 -240 -141 -126 -72 -240 -141 -252 -152 -23 -21 -23 -23 -23 -334 0 -309 0 -313 22 -334 12 -11 34 -20 49 -20 31 0 507 268 549 309 13 12 15 63 15 327 0 293 -1 313 -19 333 -20 22 -83 29 -101 12z" />
+              <path
+                d="M334 3602 c-12 -2 -30 -12 -40 -24 -17 -18 -19 -44 -22 -319 -2 -245 0 -303 12 -326 18 -36 515 -326 559 -326 16 0 38 9 50 22 22 21 22 28 25 324 2 229 0 307 -10 325 -12 24 -36 39 -358 224 -180 103 -185 106 -216 100z" />
+              <path
+                d="M2204 3149 c-142 -83 -262 -156 -266 -162 -16 -25 -8 -74 15 -94 42 -38 511 -303 537 -303 26 0 496 265 538 303 22 21 30 69 14 94 -15 23 -526 313 -552 313 -16 0 -132 -61 -286 -151z" />
+              <path
+                d="M1057 3160 l-37 -32 0 -305 c0 -188 4 -312 10 -323 9 -16 134 -97 190 -123 8 -4 31 -17 50 -28 19 -12 55 -33 80 -47 25 -14 57 -33 72 -43 14 -11 29 -19 32 -19 3 0 27 -13 53 -30 26 -17 60 -30 75 -30 33 0 74 24 89 52 11 20 13 615 3 643 -5 12 -159 105 -335 203 -20 11 -67 39 -105 62 -94 58 -130 62 -177 20z" />
+              <path
+                d="M1873 2732 c-23 -19 -23 -20 -23 -335 0 -300 1 -317 19 -334 11 -10 113 -72 227 -138 311 -180 301 -175 335 -163 16 6 34 19 40 30 11 20 14 615 3 643 -5 12 -159 105 -335 203 -20 11 -67 39 -105 62 -83 51 -130 60 -161 32z" />
+              <path
+                d="M3095 2731 c-6 -5 -113 -68 -240 -141 -126 -72 -240 -141 -252 -152 -23 -21 -23 -23 -23 -334 0 -309 0 -313 22 -334 12 -11 34 -20 49 -20 31 0 507 268 549 309 13 12 15 63 15 327 0 293 -1 313 -19 333 -20 22 -83 29 -101 12z" />
+              <path
+                d="M303 2702 c-23 -19 -23 -20 -23 -335 0 -300 1 -317 19 -334 11 -10 113 -72 227 -138 311 -180 301 -175 335 -163 16 6 34 19 40 30 11 20 14 615 3 643 -5 12 -159 105 -335 203 -20 11 -67 39 -105 62 -83 51 -130 60 -161 32z" />
+              <path
+                d="M334 1852 c-12 -2 -30 -12 -40 -24 -17 -18 -19 -44 -22 -319 -2 -245 0 -303 12 -326 18 -36 515 -326 559 -326 16 0 38 9 50 22 22 21 22 28 25 324 2 229 0 307 -10 325 -12 24 -36 39 -358 224 -180 103 -185 106 -216 100z" />
+              <path
+                d="M1057 1410 l-37 -32 0 -305 c0 -188 4 -312 10 -323 9 -16 134 -97 190 -123 8 -4 31 -17 50 -28 19 -12 55 -33 80 -47 25 -14 57 -33 72 -43 14 -11 29 -19 32 -19 3 0 27 -14 53 -30 26 -17 60 -30 75 -30 33 0 74 24 89 52 11 20 13 615 3 643 -5 12 -159 105 -335 203 -20 11 -67 39 -105 62 -94 58 -130 62 -177 20z" />
+              <path
+                d="M2971 940 c-84 -49 -155 -90 -157 -90 -12 0 -210 -124 -220 -138 -10 -13 -13 -90 -14 -329 l0 -312 26 -20 c15 -12 36 -21 48 -21 28 0 515 282 544 315 22 26 22 30 22 320 0 194 -4 302 -11 318 -11 24 -47 47 -72 47 -7 0 -82 -40 -166 -90z" />
+              <path
+                d="M1873 982 c-23 -19 -23 -20 -23 -335 0 -300 1 -317 19 -334 11 -10 113 -72 227 -138 311 -180 301 -175 335 -163 16 6 34 19 40 30 11 20 14 615 3 643 -5 12 -159 105 -335 203 -20 11 -67 39 -105 62 -83 51 -130 60 -161 32z" />
+            </g>
+          </svg>
+          <p class="cursor-pointer pt-2 pl-2 text-2xl font-bold text-gray-700">
+            <span>E</span>nigma
+          </p>
+        </div>
+      </header>
+      <main class="flex flex-col gap-y-5">
+        <div class="border bg-gray-100 px-8 pb-16 pt-4">
+          <nav
+            class="h-auto w-24 rounded border border-gray-400/30 bg-emerald-300/10 px-2 py-1 text-emerald-600">
+            <i class="fa-solid fa-language pr-2"></i>Texto
+          </nav>
+        </div>
+        <div
+          class="relative mx-8 -mt-16 flex justify-between gap-2 rounded bg-white shadow-lg">
+          <div class="reverse absolute left-[calc(50%-14px)] top-[8px]">
+            <button
+              class="h-7 w-7 rounded-full border border-emerald-600 bg-emerald-600">
+              <i class="fa-solid fa-right-left text-sm text-white"></i>
+            </button>
+          </div>
+          <div class="w-1/2">
+            <div class="flex flex-row">
+              <button
+                class="encriptar use rounded-t-md py-2 px-4 text-gray-500 hover:bg-emerald-600/5 hover:text-emerald-600">
+                Desencriptado
+              </button>
+              <button
+                class="desencriptar rounded-t-md py-2 px-4 text-gray-500 hover:bg-emerald-600/5 hover:text-emerald-600">
+                Encriptado
+              </button>
+            </div>
+            <div
+              class="z-0 mt-[-1px] rounded-md rounded-tl-none border border-emerald-600 p-1">
+              <textarea
+                class="text-area-1 h-40 w-full resize-none border border-none px-4 py-5 font-inter text-xl text-gray-700 outline-none"
+                autofocus
+                autocomplete="off"></textarea>
+            </div>
+          </div>
+          <div class="w-1/2">
+            <div class="ml-6 flex flex-row">
+              <button
+                class="encriptar use cursor-auto rounded-t-md py-2 px-4 text-gray-500">
+                Encriptado
+              </button>
+              <button
+                class="desencriptar cursor-auto rounded-t-md py-2 px-4 text-gray-500">
+                Desencriptado
+              </button>
+            </div>
+            <div class="z-0 mt-[-1px] rounded-md border border-emerald-600 p-1">
+              <textarea
+                placeholder="..."
+                class="text-area-2 h-40 w-full resize-none border border-none bg-white px-4 py-5 font-inter text-xl text-gray-700 outline-none"
+                disabled
+                autocomplete="off"></textarea>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
