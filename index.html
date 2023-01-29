@@ -83,14 +83,15 @@
           </nav>
         </div>
         <div
-          class="relative mx-8 -mt-16 flex justify-between gap-2 rounded bg-white shadow-lg">
-          <div class="reverse absolute left-[calc(50%-14px)] top-[8px]">
+          class="relative mx-8 -mt-16 flex flex-col justify-between gap-y-6 rounded bg-white shadow-lg md:flex-row md:gap-x-1">
+          <div
+            class="reverse absolute left-[calc(50%-14px)] top-[8px] hidden md:block">
             <button
               class="h-7 w-7 rounded-full border border-emerald-600 bg-emerald-600">
               <i class="fa-solid fa-right-left text-sm text-white"></i>
             </button>
           </div>
-          <div class="w-1/2">
+          <div class="w-full md:w-1/2">
             <div class="flex flex-row">
               <button
                 class="encriptar use rounded-t-md py-2 px-4 text-gray-500 hover:bg-emerald-600/5 hover:text-emerald-600">
@@ -109,7 +110,7 @@
                 autocomplete="off"></textarea>
             </div>
           </div>
-          <div class="w-1/2">
+          <div class="w-full md:w-1/2">
             <div class="ml-6 flex flex-row">
               <button
                 class="encriptar use cursor-auto rounded-t-md py-2 px-4 text-gray-500">
