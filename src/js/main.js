@@ -15,11 +15,11 @@ textAreaOne.addEventListener('keydown', () => {
   if (encr[0].classList.contains('use')) {
     setTimeout(() => {
       textAreaTwo.value = encriptar(textAreaOne.value)
-    }, 1500)
+    }, 500)
   } else {
     setTimeout(() => {
       textAreaTwo.value = desencriptar(textAreaOne.value)
-    }, 1500)
+    }, 500)
   }
 })
 
